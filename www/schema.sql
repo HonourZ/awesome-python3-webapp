@@ -1,4 +1,3 @@
--- schema.sql
 
 drop database if exists awesome;
 
@@ -6,6 +5,7 @@ create database awesome;
 
 use awesome;
 
+grant select, insert, update, delete on awesome.* to 'www-data'@'localhost';
 
 create table users (
     `id` varchar(50) not null,
